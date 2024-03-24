@@ -88,5 +88,26 @@ public class lesson_array {
                 break;
             }
         }
+
+        int[] array = new int[5];
+        int counter = 0;
+
+        for (int i = 0; i<100;i++){
+            if (counter == array.length){
+                int[] newArrays = new int[2*counter];
+
+                for (int j = 0; j<counter; j++){
+                    newArrays[j] = array[j];
+                }
+
+                array = newArrays;
+            }else{
+                array[counter++] = i;
+            }
+        }
+
+        for (int i = 0; i<array.length;i++){
+            System.out.println(array[i]);
+        }
     }
 }
