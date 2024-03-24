@@ -69,7 +69,24 @@ public class lesson_array {
         System.out.println(preMaxStr);
         System.out.println(minStr);
 
+        int[] numbersArray = new int[100];
+        int[] sortedArray = new int[100];
+        int count = 0;
 
+        for (int index = 0; index < numbersArray.length; index++) {
+            numbersArray[index] = index + 1;
+            if (numbersArray[index] < 50 && numbersArray[index] % 2 == 0 && numbersArray[index] % 10 == 6) {
+                sortedArray[count] = numbersArray[index];
+                count++;
+            }
+        }
 
+        for (int index = 0; index < sortedArray.length;index++){
+            if (sortedArray[index]!=0){
+                System.out.println(sortedArray[index]);
+            }else{
+                break;
+            }
+        }
     }
 }
