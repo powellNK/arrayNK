@@ -54,12 +54,22 @@ public class lesson_array {
             books[index] = generatorRand.nextInt(1,100);
         }
         int maxStr = books[0];
+        int minStr = books[0];
+        int preMaxStr = books[0];
         for (int index = 0; index<books.length; index++){
             if (maxStr<books[index]){
+                preMaxStr = maxStr;
                 maxStr = books[index];
+            }
+            if (minNum>books[index]){
+                minStr = books[index];
             }
         }
         System.out.println(maxStr);
+        System.out.println(preMaxStr);
+        System.out.println(minStr);
+
+
 
     }
 }
