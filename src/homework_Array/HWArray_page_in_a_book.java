@@ -9,10 +9,11 @@ public class HWArray_page_in_a_book {
         Random generatorRand = new Random();
         for (int index = 0; index<books.length; index++){
             books[index] = generatorRand.nextInt(1,100);
+            System.out.println(books[index]);
             if (maxStr<books[index]){
                 maxStr = books[index];
             }
         }
-        System.out.println(maxStr);
+        System.out.println("Количество страниц в самой толстой книге " + maxStr);
     }
 }
