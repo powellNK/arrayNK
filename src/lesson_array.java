@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class lesson_array {
     public static void main(String[] args) {
         int[] numbers = new int[5]; // массив из 5 элементов. по умолчанию нулевое значение для типа данных
@@ -45,5 +47,19 @@ public class lesson_array {
         }
         System.out.println(maxNum);
         System.out.println(minNum);
+
+        int[] books = new int[100];
+        Random generatorRand = new Random();
+        for (int index = 0; index<books.length; index++){
+            books[index] = generatorRand.nextInt(1,100);
+        }
+        int maxStr = books[0];
+        for (int index = 0; index<books.length; index++){
+            if (maxStr<books[index]){
+                maxStr = books[index];
+            }
+        }
+        System.out.println(maxStr);
+
     }
 }
