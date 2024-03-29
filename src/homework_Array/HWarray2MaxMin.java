@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class HWarray2MaxMin {
     public static void main(String[] args) {
-        int [][] array = new int[6][8];
+        int[][] array = new int[6][8];
         System.out.println();
         Random generatorRand = new Random();
         for (int row = 0; row < array.length; row++) {
@@ -22,14 +22,14 @@ public class HWarray2MaxMin {
                 if (maxElement < array[row][col]) {
                     preMax = maxElement;
                     maxElement = array[row][col];
-                } else if (array[row][col] > preMax && array[row][col]!=maxElement) {
+                } else if (array[row][col] > preMax && array[row][col] != maxElement) {
                     preMax = array[row][col];
                 }
 
                 if (minElement > array[row][col]) {
                     preMin = minElement;
                     minElement = array[row][col];
-                } else if(array[row][col]< preMin && array[row][col]!=minElement){
+                } else if (array[row][col] < preMin && array[row][col] != minElement) {
                     preMin = array[row][col];
                 }
             }
@@ -38,7 +38,7 @@ public class HWarray2MaxMin {
         System.out.println("");
         System.out.println("Максимальный элемент: " + maxElement);
         System.out.println("Минимальный элемент: " + minElement);
-        System.out.println("2 максимальный элемент: " +preMax);
-        System.out.println("2 минимальный элемент: " +preMin);
-        }
+        System.out.println("2 максимальный элемент: " + preMax);
+        System.out.println("2 минимальный элемент: " + preMin);
+    }
 }
